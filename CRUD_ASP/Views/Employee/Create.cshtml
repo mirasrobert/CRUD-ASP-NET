@@ -1,0 +1,37 @@
+﻿@model CRUD_ASP.Models.Employee
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1>Add Employee</h1>
+<form method="post" action="Store">
+    @Html.AntiForgeryToken()
+    <div class="mb-3">
+        <label class="form-label">Employee ID</label>
+        <input type="number" class="form-control" asp-for="Id">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Email address</label>
+        <input type="email" class="form-control" asp-for="Email" >
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name" >
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Address</label>
+        <input type="text" class="form-control" asp-for="Address">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Salary</label>
+        <input type="number" class="form-control" asp-for="Salary">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Date of Birth</label>
+        <input type="date" class="form-control" asp-for="BirthDate">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
